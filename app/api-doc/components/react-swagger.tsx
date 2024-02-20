@@ -8,6 +8,9 @@ type Props = {
 };
 
 function ReactSwagger({ spec }: Props) {
+  if (!spec) {
+    return <div>Api docs not found</div>;
+  }
   return <SwaggerUI spec={spec} />;
 }
 
